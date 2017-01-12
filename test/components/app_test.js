@@ -3,18 +3,14 @@ import App from '../../src/components/App';
 
 // use 'describe' to group together similar tests
 describe('App', () => {
+  let component;
 
-  // use 'it' to test a single attribute of a target
-  // the string is used as guidance/documentation
-  it('shows the correct text', () => {
+  beforeEach(() => {
+    component = renderComponent(App);
+  });
 
-    // create an instance of App
-    const component = renderComponent(App);
-
-    // use 'expect' to make an 'assertion' about a target
-    // target being the App component
-    expect(component).to.contain('React simple starter');
-
+  it('shows a comment box', () => {
+    expect(component.find('.comment-box')).to.exist;
   });
 
 });
