@@ -32,7 +32,8 @@ describe('CommentBox', () => {
     });
 
     it('when comment is submitted, input is cleared', () => {
-
+      component.simulate('submit');
+      expect(component.find('textarea')).to.have.value('');
     });
   });
 });
