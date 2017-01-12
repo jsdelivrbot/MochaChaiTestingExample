@@ -5,7 +5,7 @@ describe('CommentList', () => {
   let component;
 
   beforeEach(() => {
-    const props = { comments: ['new comment', 'other new commment'] };
+    const props = { comments: ['new comment', 'other new comment'] };
     component = renderComponent(CommentList, null, props);
   });
 
